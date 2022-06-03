@@ -1,0 +1,19 @@
+extends default
+
+block content
+  div(class='container')
+    h2 Crear Nuevo Cliente
+    form(action='/clientes/new' method="POST")
+      div(class='form-group')
+        label(for='name') Nombre
+        input(type='text' class='form-control' id='name' name='name'  placeholder='Ingrese el nombre del cliente', required)
+      div(class='form-group')
+        label(for='email') Correo
+        input(type='email' class='form-control' id='email' name='email' placeholder='Ingrese el correo del cliente', required)
+      div(class='form-group')
+        label(for='direction') Direccion
+        input(type='text' class='form-control' id='direction' name='direction' placeholder='Ingrese la direccion del cliente')
+      div(class='form-group')
+        label(for='phone') Numero de Telefono
+        input(type='phone' class='form-control' id='phone' name='phone' placeholder='985478514')
+      button(class='btn btn-success' type='submit') Guardar
